@@ -1,4 +1,5 @@
 import random, sys, time
+import simple_colors
 
 def sprint(str):
     for c in str + '\n':
@@ -6,8 +7,26 @@ def sprint(str):
         sys.stdout.flush()
         time.sleep(6./90)
 
+
+print(simple_colors.cyan(r'''
+   _____                                        
+  / ____|                     _                  
+ | (___   __ ___   _____    _| |_                
+  \___ \ / _` \ \ / / _ \  |_   _|               
+  ____) | (_| |\ V /  __/    |_|                 
+ |_____/ \__,_| \_/ \___|
+ ___  _           __ 
+ | | | |          \ \    / (_)   (_)            
+ | |_| |__   ___   \ \  / / _ ___ _  ___  _ __  
+ | __| '_ \ / _ \   \ \/ / | / __| |/ _ \| '_ \ 
+ | |_| | | |  __/    \  /  | \__ \ | (_) | | | |
+  \__|_| |_|\___|     \/   |_|___/_|\___/|_| |_|
+  '''                                      
+))
+
+print(simple_colors.green("--A Genshin Impact adventure as a Hangman game--\n"))
 # welcoming the user
-name = input("Hello, Traveler! What is your name?\n")
+name = input("\nHello, Traveler! What is your name?\n")
 
 # List of elements
 elements = ['pyro', 'hydro', 'dendro', 'anemo', 'electro', 'geo', 'cryo']
@@ -15,13 +34,13 @@ elements = ['pyro', 'hydro', 'dendro', 'anemo', 'electro', 'geo', 'cryo']
 # Randomly select one element from the list
 random_element = random.choice(elements)
 
-sprint(f"\n{name.capitalize()}, the gods have blessed you with the {random_element.capitalize()} vision.\n")
+sprint(f"\n{name.capitalize()}, the gods have blessed you with the {random_element.capitalize()} vision. \n")
 
 sprint('But now a Fatui agent is trying to steal it!\n')
 
 sprint('Can you guess who is coming to help you?\n')
 
-sprint("Instructions: This is a Hangman style game. Guess the letters from a Genshin Impact character's name.\nIncorrect guesses bring the Fatui agent closer to the Vision. \n")
+sprint(simple_colors.green("Instructions: This is a Hangman style game. Guess the letters from a Genshin Impact character's name.\nIncorrect guesses bring the Fatui agent closer to the Vision. \n"))
 
 # Function that selects a random name from the list to be used in the game
 def random_characters():
@@ -38,7 +57,7 @@ def random_characters():
 def display_hangman(tries):
     stages = [
         r'''
-       
+             ⋆｡ﾟ☁︎｡⋆｡ ﾟ☾ ﾟ｡⋆ ﾟ｡⋆ ☁︎｡⋆｡ ﾟ⋆       
                                            +
                                          O/   
        ---------------------------------/|  
@@ -46,7 +65,7 @@ def display_hangman(tries):
     ========================================
         ''',
         r'''
-         
+              ⋆｡ﾟ☁︎｡⋆｡ ﾟ☾ ﾟ｡⋆ ﾟ｡⋆ ☁︎｡⋆｡ ﾟ⋆        
          
                                    O   
        ---------------------------/|\-- +  
@@ -54,7 +73,7 @@ def display_hangman(tries):
     ========================================
         ''',
        r'''
-         
+             ⋆｡ﾟ☁︎｡⋆｡ ﾟ☾ ﾟ｡⋆ ﾟ｡⋆ ☁︎｡⋆｡ ﾟ⋆
          
                              O   
        ---------------------/|\-------- +  
@@ -62,7 +81,7 @@ def display_hangman(tries):
     ========================================
         ''',
         r'''
-         
+             ⋆｡ﾟ☁︎｡⋆｡ ﾟ☾ ﾟ｡⋆ ﾟ｡⋆ ☁︎｡⋆｡ ﾟ⋆         
          
                        O   
        ---------------/|\-------------- +  
@@ -70,7 +89,7 @@ def display_hangman(tries):
     ========================================
         ''',
         r'''
-        
+             ⋆｡ﾟ☁︎｡⋆｡ ﾟ☾ ﾟ｡⋆ ﾟ｡⋆ ☁︎｡⋆｡ ﾟ⋆        
          
                  O   
        ---------/|\-------------------- +  
@@ -78,7 +97,7 @@ def display_hangman(tries):
     ========================================
         ''',
         r'''
-        
+             ⋆｡ﾟ☁︎｡⋆｡ ﾟ☾ ﾟ｡⋆ ﾟ｡⋆ ☁︎｡⋆｡ ﾟ⋆        
          
            O   
        ---/|\-------------------------- +  
@@ -86,7 +105,7 @@ def display_hangman(tries):
     ========================================
         ''',
         r'''
-        
+             ⋆｡ﾟ☁︎｡⋆｡ ﾟ☾ ﾟ｡⋆ ﾟ｡⋆ ☁︎｡⋆｡ ﾟ⋆        
          
         O   
        /|\----------------------------- +  
@@ -100,17 +119,18 @@ def display_hangman(tries):
 # Game function
 def game(genshin_characters):
     word_completion = "_" * len(genshin_characters)
+    hint = "paimon"
     guessed = False
     guessed_letters = []
     guessed_words = []
     tries = 6
     print(f"\nLet's play, {name.capitalize()}!")
-    print(display_hangman(tries))
+    print(simple_colors.cyan(display_hangman(tries)))
     print(word_completion)
     print("\n")
 
     while not guessed and tries > 0:
-        guess = input("Who is coming to help you? \n").upper()
+        guess = input(simple_colors.green("Who is coming to help you? \n")).upper()
         if len(guess) == 1 and guess.isalpha():
             if guess in guessed_letters:
                 print("\n You've already guessed", guess)
@@ -138,18 +158,24 @@ def game(genshin_characters):
             else:
                 guessed = True
                 word_completion = genshin_characters
+        
+        elif len(guess) == len(hint):
+            print(simple_colors.yellow(f"\n>->->->-> Hi, {name.capitalize()}! ・゜ʚɞ ゜゜\n>->->->-> Maybe we should try the letter {random.choice(genshin_characters)}."))
+
         else:
             print("\nNot a valid guess.")
 
-        print(display_hangman(tries))
+        print(simple_colors.cyan(display_hangman(tries)))
         print(word_completion)
         print("\nGuessed letters:", guessed_letters)
+        print("\n˚₊‧꒰ა  ʚ If you need help, type 'paimon' to receive a hint. ɞ  ໒꒱ ‧₊˚")
         print("\n")
 
     if guessed:
-        print(f"You got it, {name.capitalize()}! {genshin_characters.title()} is here to help you! Together you form the best adventuring due and no Fatui agent can steal from you.\n")
+        sprint(simple_colors.yellow(f"You got it, {name.capitalize()}! {genshin_characters.title()} is here to help you!\nTogether you form the best adventuring due and no Fatui agent can steal your {random_element.capitalize()} vision from you.\n"))
     else:
-        print(f"Oh no, the Fatui agent stole your vision! You didn't discover {genshin_characters.title()} in time.\n")
+        sprint(simple_colors.yellow(f"Oh no, the Fatui agent stole your vision! You didn't discover {genshin_characters.title()} in time.\n"))
+
 
 # Main function
 def main():
