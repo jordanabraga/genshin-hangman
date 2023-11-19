@@ -36,7 +36,7 @@ random_element = random.choice(elements)
 
 sprint(f"\n{name.capitalize()}, the gods have blessed you with the {random_element.capitalize()} vision. \n")
 
-sprint('But now a Fatui agent is trying to steal it!\n')
+sprint('Oh no! Now a Fatui agent is trying to steal it!\n')
 
 sprint('Can you guess who is coming to help you?\n')
 
@@ -133,13 +133,13 @@ def game(genshin_characters):
         guess = input(simple_colors.green("Who is coming to help you? \n")).upper()
         if len(guess) == 1 and guess.isalpha():
             if guess in guessed_letters:
-                print("\n You've already guessed", guess)
+                print("\nYou've already guessed", guess)
             elif guess not in genshin_characters:
                 print("\n", guess, "is not in the name.")
                 tries -= 1
                 guessed_letters.append(guess)
             else:
-                print("\n Good job,", guess, "is in the name!")
+                print("\nGood job,", guess, "is in the name!")
                 guessed_letters.append(guess)
                 word_as_list = list(word_completion)
                 indices = [i for i, letter in enumerate(genshin_characters) if letter == guess]
@@ -150,7 +150,7 @@ def game(genshin_characters):
                     guessed = True
         elif len(guess) == len(genshin_characters) and guess.isalpha():
             if guess in guessed_words:
-                print("\n You've already guessed", guess)
+                print("\nYou've already guessed", guess)
             elif guess != genshin_characters:
                 print("\n", guess, "is not in the name.")
                 tries -= 1
@@ -165,6 +165,7 @@ def game(genshin_characters):
         else:
             print("\nNot a valid guess.")
 
+        print("<<>><<>><<>><<>><<>><<>><<>><<>><<>><<>><<>><<>><<>><<>><<>><<>><<>><<>><<>>")
         print(simple_colors.cyan(display_hangman(tries)))
         print(word_completion)
         print("\nGuessed letters:", guessed_letters)
