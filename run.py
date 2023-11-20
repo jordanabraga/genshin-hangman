@@ -40,7 +40,7 @@ sprint('Oh no! Now a Fatui agent is trying to steal it!\n')
 
 sprint('Can you guess who is coming to help you?\n')
 
-sprint(simple_colors.green("Instructions: This is a Hangman style game. Guess the letters from a Genshin Impact character's name.\nIncorrect guesses bring the Fatui agent closer to the Vision. \n"))
+sprint(simple_colors.green("Instructions: This is a Hangman style game.\n Guess the letters from a Genshin Impact character's name.\nIncorrect guesses bring the Fatui agent closer to the Vision. \n"))
 
 # Function that selects a random name from the list to be used in the game
 def random_characters():
