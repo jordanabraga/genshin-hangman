@@ -134,7 +134,7 @@ possible answer scenarios, and printing the feedback.
 '''
 
 def game(genshin_characters):
-    word_completion = "_" * len(genshin_characters)
+    word_completion = " _ " * len(genshin_characters)
     guessed = False
     guessed_letters = []
     guessed_words = []
@@ -199,12 +199,12 @@ Series of terminal prints to introduce the game.
 '''
 
 print(simple_colors.cyan(r'''
-   _____                                        
-  / ____|                     _                  
- | (___   __ ___   _____    _| |_                
-  \___ \ / _` \ \ / / _ \  |_   _|               
-  ____) | (_| |\ V /  __/    |_|                 
- |_____/ \__,_| \_/ \___|
+   _____   
+  / ____|                     _ 
+ | (___   __ ___   _____    _| |_  
+  \___ \ / _` \ \ / / _ \  |_   _|
+  ____) | (_| |\ V /  __/    |_|
+  
  ___  _           __ 
  | | | |          \ \    / (_)   (_)            
  | |_| |__   ___   \ \  / / _ ___ _  ___  _ __  
