@@ -59,15 +59,15 @@ Specific design that references Genshin Impact
 ## Future Features
 If this game were expanded, it could include:
 
-The game could go through 4 rounds with a longer narrative as the player discovers and assembles their 4 characters team (the standard in the game). 
+- The game could go through 4 rounds with a longer narrative as the player discovers and assembles their 4 characters team (the standard in the game). 
 
-The hint system could be more complex and, instead of hinting letters, it could give suggestions about the character itself to test the player's knowledge. For example: "This character is from the Fontaine region."
+- The hint system could be more complex and, instead of hinting letters, it could give suggestions about the character itself to test the player's knowledge. For example: "This character is from the Fontaine region."
 
-The text color when the Vision is mentioned could change to match the element type. 
+- The text color when the Vision is mentioned could change to match the element type. 
 
 # Planning
 
-Save the Vision, in essence, is a Hangman game with a theme of Genshin characters. 
+**Save the Vision, in essence, is a Hangman game with a theme of Genshin characters.** 
 
 The target audience is Genshin Impact players who might want to have a moment of fun challenging themselves, and discovering their Vision type and Genshin partner through a simple guessing game. 
 
@@ -90,7 +90,24 @@ I experimented both on my terminal and on Heroku terminal writing multiple types
 
 ## Pycodestyle (PEP8)
 
+<details>
+<summary>Pycodestyle (PEP8)</summary>
+<br>
+
+![Pycodestyle](docs/readme/Pycode_Style.jpg)
+
+</details>
+
 ## CI Python Linter
+
+<details>
+<summary>CI Python Linter Validation</summary>
+<br>
+
+![CI Python Linter Validation](docs/readme/CIPython_Linter.jpg)
+
+</details>
+
 
 # Deployment
 
@@ -151,7 +168,6 @@ I studied from multiple references to learn how to make my own Hangman game.
 https://www.pythonforbeginners.com/code-snippets-source-code/game-hangman
 https://gist.github.com/lupinetti/8f89e5f33750aa7c91c3
 https://inventwithpython.com/invent4thed/chapter8.html
-chat.openai.com/?model=text-davinci-002-render-sha
 https://www.youtube.com/watch?v=MtYw0RaZ4B0&t=916s
 https://www.youtube.com/watch?v=5x6iAKdJB6U&t=273s
 https://www.youtube.com/watch?v=JNXmCOumNw0
