@@ -13,6 +13,8 @@ In this game, the player receives one type of elemental vision and must protect 
 
 In a sense, Genshin Impact is a game about discovering new friends and saving the day. And in "Save the Vision" this remains true. 
 
+![Save the Vision game intro screenshot](docs/readme/save_the_vision.png)
+
 # How to play
 
 The player is prompted to type their name, and then the game starts. The player is assigned a random type of Vision and it's introduced to the game with a story - a Fatui agent is trying to steal their Vision, and they must find out which Genshin character is coming to help.
@@ -89,7 +91,9 @@ The stars and moon added to the ASCII graphic relate to the stars symbology in t
 
 Paimon is a character in the game. She's a small fairy that guides the player. The ASCII details reinforce the character's identity. And she is the one who gives hints in Genshin.
 
-The player has unlimited hints by design. The game already has 80 character options, and the names are hard to guess in general. This is challenge enough. Save the Vision is a relaxing, fun game first. And this allows the player to choose how hard they want it to be. Besides that, Genshin Impact itself is a game that might be hard sometimes, but utimately you can always win. 
+![Save the Vision code screenshot list o Genshin Impact characters](docs/readme/list_genshin_characters.jpg)
+
+**The player has unlimited hints by design.** The game already has 80 character options, and the names are hard to guess in general. This is challenge enough. Save the Vision is a relaxing, fun game first. And this allows the player to choose how hard they want it to be. Besides that, Genshin Impact itself is a game that might be hard sometimes, but utimately you can always win. 
 
 # Testing
 
