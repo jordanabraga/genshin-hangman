@@ -192,3 +192,37 @@ def game(genshin_characters):
         sprint(simple_colors.yellow(f"You got it, {name.capitalize()}! {genshin_characters.title()} is here to help you!\nTogether you form the best adventuring due and no Fatui agent can steal your {random_element.capitalize()} vision from you.\n"))
     else:
         sprint(simple_colors.yellow(f"Oh no, the Fatui agent stole your vision! You didn't discover {genshin_characters.title()} in time.\n"))
+
+
+'''
+Series of terminal prints to introduce the game.
+'''
+
+print(simple_colors.cyan(r'''
+   _____                                        
+  / ____|                     _                  
+ | (___   __ ___   _____    _| |_                
+  \___ \ / _` \ \ / / _ \  |_   _|               
+  ____) | (_| |\ V /  __/    |_|                 
+ |_____/ \__,_| \_/ \___|
+ ___  _           __ 
+ | | | |          \ \    / (_)   (_)            
+ | |_| |__   ___   \ \  / / _ ___ _  ___  _ __  
+ | __| '_ \ / _ \   \ \/ / | / __| |/ _ \| '_ \ 
+ | |_| | | |  __/    \  /  | \__ \ | (_) | | | |
+  \__|_| |_|\___|     \/   |_|___/_|\___/|_| |_|
+  '''                                      
+))
+
+print(simple_colors.green("--A Genshin Impact adventure as a Hangman game--\n"))
+
+name = input("\nHello, Traveler! What is your name?\n")
+
+sprint(f"\n{name.capitalize()}, the gods have blessed you with the {random_element.capitalize()} vision. \n")
+
+sprint('Oh no! Now a Fatui agent is trying to steal it!\n')
+
+sprint('Can you guess who is coming to help you?\n')
+
+sprint(simple_colors.green("Instructions: This is a Hangman style game.\n Guess the letters from a Genshin Impact character's name.\nIncorrect guesses bring the Fatui agent closer to the Vision. \n"))
+
