@@ -119,3 +119,76 @@ def display_hangman(tries):
     ]
 
     return stages[tries]
+
+
+'''
+This function defines the mechanics of the game.
+In this game the player type letters or words trying to match a secret word.
+The function provides feedback to say if the input is right, wrong or not valid.
+It also had a hint system. 
+And it counts the number of tries to see if the player will lose or win.
+
+This is accomplished by defining variables first, then providing an input
+with a while loop that includes a series of if else statements covering 
+possible answer scenarios, and printing the feedback.
+'''
+
+def game(genshin_characters):
+    word_completion = "_" * len(genshin_characters)
+    guessed = False
+    guessed_letters = []
+    guessed_words = []
+    tries = 6
+    hint = "paimon"
+    print(f"\nLet's play, {name.capitalize()}!")
+    print(simple_colors.cyan(display_hangman(tries)))
+    print(word_completion)
+    print("\n")
+
+    while not guessed and tries > 0:
+        guess = input(simple_colors.green("Who is coming to help you? \n")).upper()
+        if len(guess) == 1 and guess.isalpha():
+            if guess in guessed_letters:
+                print("\nYou've already guessed", guess)
+            elif guess not in genshin_characters:
+                print("\n", guess, "is not in the name.")
+                tries -= 1
+                guessed_letters.append(guess)
+            else:
+                print("\nGood job,", guess, "is in the name!")
+                guessed_letters.append(guess)
+                word_as_list = list(word_completion)
+                indices = [i for i, letter in enumerate(genshin_characters) if letter == guess]
+                for index in indices:
+                    word_as_list[index] = guess
+                word_completion = "".join(word_as_list)
+                if "_" not in word_completion:
+                    guessed = True
+        elif len(guess) == len(genshin_characters) and guess.isalpha():
+            if guess in guessed_words:
+                print("\nYou've already guessed", guess)
+            elif guess != genshin_characters:
+                print("\n", guess, "is not in the name.")
+                tries -= 1
+                guessed_words.append(guess)
+            else:
+                guessed = True
+                word_completion = genshin_characters
+        
+        elif len(guess) == len(hint):
+            print(simple_colors.yellow(f"\n>->->->-> Hi, {name.capitalize()}! ・゜ʚɞ ゜゜\n>->->->-> Maybe we should try the letter {random.choice(genshin_characters)}."))
+
+        else:
+            print("\nNot a valid guess.")
+
+        print("<<>><<>><<>><<>><<>><<>><<>><<>><<>><<>><<>><<>><<>><<>><<>><<>><<>><<>><<>>")
+        print(simple_colors.cyan(display_hangman(tries)))
+        print(word_completion)
+        print("\nGuessed letters:", guessed_letters)
+        print("\n˚₊‧꒰ა  ʚ If you need help, type 'paimon' to receive a hint. ɞ  ໒꒱ ‧₊˚")
+        print("\n")
+
+    if guessed:
+        sprint(simple_colors.yellow(f"You got it, {name.capitalize()}! {genshin_characters.title()} is here to help you!\nTogether you form the best adventuring due and no Fatui agent can steal your {random_element.capitalize()} vision from you.\n"))
+    else:
+        sprint(simple_colors.yellow(f"Oh no, the Fatui agent stole your vision! You didn't discover {genshin_characters.title()} in time.\n"))
