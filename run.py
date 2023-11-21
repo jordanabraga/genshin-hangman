@@ -226,3 +226,18 @@ sprint('Can you guess who is coming to help you?\n')
 
 sprint(simple_colors.green("Instructions: This is a Hangman style game.\n Guess the letters from a Genshin Impact character's name.\nIncorrect guesses bring the Fatui agent closer to the Vision. \n"))
 
+
+'''
+The main function using the game function and creating a 
+while loop to allows players to restart the game
+'''
+
+def main():
+    genshin_characters = random_characters()
+    game(genshin_characters)
+    while input("Want to go adventuring again? (Y/N): ").upper() == "Y":
+        genshin_characters = random_characters()
+        game(genshin_characters)
+
+if __name__ == "__main__":
+    main()
