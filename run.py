@@ -5,7 +5,7 @@ import simple_colors
 
 '''
 SAVE THE VISION is a Genshin Impact adventure made in hangman style game. 
-Created by Dana Braga using Python. 
+Created by Jordana Braga using Python. 
 '''
 
 # Function to display text as if typed
