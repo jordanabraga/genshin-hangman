@@ -5,7 +5,7 @@
 
 **Save the Vision** is terminal-based python game using the mechanics of the classic Hangman. It's a tribute to the Genshin Impact's franchise and invites the player on an adventure. 
 
-(Live Website)[https://genshin-hangman-f62fd6be098c.herokuapp.com/]
+[Live Website](https://genshin-hangman-f62fd6be098c.herokuapp.com/)
 
 ![Save the Vision game intro screenshot](docs/readme/save_the_vision_screenshot.jpg)
 
