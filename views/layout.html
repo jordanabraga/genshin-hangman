@@ -18,7 +18,22 @@
     <style>
         body {
             font-family: Arial;
+            background: url("assets/images/background-image.png") no-repeat 50% 50%;
+            background-color:#000;
+            background-size: cover;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+            justify-content: center;
         }
+
+        #terminal {
+        border: 5px solid rgb(16, 136, 255);
+        border-radius: 10px;
+        padding: 1rem;
+        overflow-y: hidden;
+      }
 
         /**
         * Default styles for xterm.js
@@ -164,9 +179,9 @@
         button {
             width: 200px;
             height: 40px;
-            background-color: #E84610;
-            border: 1px solid grey;
-            color: white;
+            background-color: rgb(212, 206, 190);
+            border: 1px solid rgb(0, 0, 0);
+            color: #000;
             text-transform: uppercase;
             margin: 10px;
             border-radius: 8px;
