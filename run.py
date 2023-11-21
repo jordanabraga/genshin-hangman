@@ -48,10 +48,10 @@ def random_characters():
         'Bennett', 'Chongyun', 'Diona', 'Xinyan', 'Sayu', 'Yanfei', 'Cyno', 
         'Tighnari', 'Collei', 'Dori', 'Alhaitham', 'Dehya', 'Nilou', 'Nahida', 
         'Candace', 'Kaveh', 'Layla', 'Faruzan', 'Itto', 'Gorou', 'Kazuha', 
-        'Ayaka', 'Ayato', 'Kirara', 'Sara', 'Kuki', 'Shogun', 'Kokomi', 'Heizou', 
+        'Ayaka', 'Ayato', 'Kirara', 'Sara', 'Kuki', 'RaidenShogun', 'Kokomi', 'Heizou', 
         'Thoma', 'Yae', 'Yoimiya', 'Charlotte', 'Freminet', 'Furina', 'Lynette', 
         'Lyney', 'Neuvillette', 'Wriothesley', 'Navia', 'Clorinde', 'Sigewinne', 
-        'Arlecchino', 'Baizhu', 'Dainsleif'
+        'Arlecchino', 'Baizhu', 'Dainsleif', 'Yaoyao', 'Mika', 'Yelan', 'YunJin'
     ]
     return random.choice(genshin_characters).upper()
 
@@ -190,7 +190,7 @@ def game(genshin_characters):
         print("\n")
 
     if guessed:
-        sprint(simple_colors.yellow(f"You got it, {name.capitalize()}! {genshin_characters.title()} is here to help you!\nTogether you form the best adventuring due\nand no Fatui agent can steal your {random_element.capitalize()} vision from you.\n"))
+        sprint(simple_colors.yellow(f"You got it, {name.capitalize()}! {genshin_characters.title()} is here to help you!\nTogether you form the best adventuring due\nand no Fatui agent will ever steal your {random_element.capitalize()} vision.\n"))
     else:
         sprint(simple_colors.yellow(f"Oh no, the Fatui agent stole your vision! \nYou didn't discover {genshin_characters.title()} in time.\n"))
 
