@@ -28,6 +28,11 @@ print(simple_colors.green("--A Genshin Impact adventure as a Hangman game--\n"))
 # welcoming the user
 name = input("\nHello, Traveler! What is your name?\n")
 
+# List of elements
+elements = ['pyro', 'hydro', 'dendro', 'anemo', 'electro', 'geo', 'cryo']
+
+# Randomly select one element from the list
+random_element = random.choice(elements)
 
 sprint(f"\n{name.capitalize()}, the gods have blessed you with the {random_element.capitalize()} vision. \n")
 
