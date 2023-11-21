@@ -11,6 +11,9 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/xterm/3.14.5/xterm.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/xterm/3.14.5/addons/attach/attach.js"></script>
 
+    <!-- Font awesome kit. -->
+    <script src="https://kit.fontawesome.com/5366bdfdf4.js" crossorigin="anonymous"></script>
+
 
     
     <title>Save the Vision</title>
@@ -21,6 +24,7 @@
             background: url("https://i.imgur.com/Gf5Fbex.jpg") no-repeat;
             background-color:#000;
             background-size: cover;
+            height: 100vh;
             align-items: center;
             display: flex;
             align-items: center;
@@ -29,11 +33,19 @@
         }
 
         #terminal {
-        border: 5px solid rgb(16, 136, 255);
+        border: 5px solid rgb(212, 206, 190);
         border-radius: 10px;
         padding: 1rem;
         overflow-y: hidden;
       }
+
+        footer {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: rgb(193, 164, 114);
+            padding-bottom: 15px;
+        }
 
         /**
         * Default styles for xterm.js
@@ -182,6 +194,7 @@
             background-color: rgb(212, 206, 190);
             border: 1px solid rgb(0, 0, 0);
             color: #000;
+            font-weight: bold;
             text-transform: uppercase;
             margin: 10px;
             border-radius: 8px;

@@ -134,7 +134,7 @@ possible answer scenarios, and printing the feedback.
 '''
 
 def game(genshin_characters):
-    word_completion = " _ " * len(genshin_characters)
+    word_completion = "_" * len(genshin_characters)
     guessed = False
     guessed_letters = []
     guessed_words = []
@@ -147,6 +147,7 @@ def game(genshin_characters):
 
     while not guessed and tries > 0:
         guess = input(simple_colors.green("Who is coming to help you? \n")).upper()
+        print("\n<<>><<>><<>><<>><<>><<>><<>><<>><<>><<>><<>><<>><<>><<>><<>><<>><<>><<>><<>>")
         if len(guess) == 1 and guess.isalpha():
             if guess in guessed_letters:
                 print("\nYou've already guessed", guess)
@@ -181,7 +182,7 @@ def game(genshin_characters):
         else:
             print("\nNot a valid guess.")
 
-        print("\n<<>><<>><<>><<>><<>><<>><<>><<>><<>><<>><<>><<>><<>><<>><<>><<>><<>><<>><<>>")
+        
         print(simple_colors.cyan(display_hangman(tries)))
         print(word_completion)
         print("\nGuessed letters:", guessed_letters)
@@ -200,11 +201,11 @@ Series of terminal prints to introduce the game.
 
 print(simple_colors.cyan(r'''
    _____   
-  / ____|                     _ 
- | (___   __ ___   _____    _| |_  
+  / ____|                 
+ | (___   __ ___   _____    _| |_                
   \___ \ / _` \ \ / / _ \  |_   _|
-  ____) | (_| |\ V /  __/    |_|
-  
+  ____) | (_| |\ V /  __/    |_| 
+ |_____/ \__,_| \_/ \___|
  ___  _           __ 
  | | | |          \ \    / (_)   (_)            
  | |_| |__   ___   \ \  / / _ ___ _  ___  _ __  
