@@ -1,11 +1,6 @@
 import random, sys, time
 import simple_colors
 
-def sprint(str):
-    for c in str + '\n':
-        sys.stdout.write(c)
-        sys.stdout.flush()
-        time.sleep(6./90)
 
 
 print(simple_colors.cyan(r'''
@@ -28,7 +23,6 @@ print(simple_colors.green("--A Genshin Impact adventure as a Hangman game--\n"))
 # welcoming the user
 name = input("\nHello, Traveler! What is your name?\n")
 
-
 sprint(f"\n{name.capitalize()}, the gods have blessed you with the {random_element.capitalize()} vision. \n")
 
 sprint('Oh no! Now a Fatui agent is trying to steal it!\n')
@@ -37,79 +31,7 @@ sprint('Can you guess who is coming to help you?\n')
 
 sprint(simple_colors.green("Instructions: This is a Hangman style game.\n Guess the letters from a Genshin Impact character's name.\nIncorrect guesses bring the Fatui agent closer to the Vision. \n"))
 
-# Function that selects a random name from the list to be used in the game
-def random_characters():
-    genshin_characters = [
-        'Diluc', 'Jean', 'Mona', 'Keqing', 'Venti', 'Klee', 'Qiqi', 'Ganyu',
-        'Xiao', 'Albedo', 'Eula', 'Zhongli', 'Childe', 'Hu Tao', 'Ayaka',
-        'Rosaria', 'Beidou', 'Xingqiu', 'Sucrose', 'Ningguang', 'Xiangling',
-        'Barbara', 'Fischl', 'Kaeya', 'Lisa', 'Amber', 'Noelle', 'Razor',
-        'Bennett', 'Chongyun', 'Diona', 'Xinyan', 'Sayu', 'Yanfei', 'Childe'
-    ]
-    return random.choice(genshin_characters).upper()
 
-# Function to display the hangman stages
-def display_hangman(tries):
-    stages = [
-        r'''
-             ⋆｡ﾟ☁︎｡⋆｡ ﾟ☾ ﾟ｡⋆ ﾟ｡⋆ ☁︎｡⋆｡ ﾟ⋆       
-                                           +
-                                         O/   
-       ---------------------------------/|  
-                                        / \    
-    ========================================
-        ''',
-        r'''
-              ⋆｡ﾟ☁︎｡⋆｡ ﾟ☾ ﾟ｡⋆ ﾟ｡⋆ ☁︎｡⋆｡ ﾟ⋆        
-         
-                                   O   
-       ---------------------------/|\-- +  
-                                  / \    
-    ========================================
-        ''',
-       r'''
-             ⋆｡ﾟ☁︎｡⋆｡ ﾟ☾ ﾟ｡⋆ ﾟ｡⋆ ☁︎｡⋆｡ ﾟ⋆
-         
-                             O   
-       ---------------------/|\-------- +  
-                            / \    
-    ========================================
-        ''',
-        r'''
-             ⋆｡ﾟ☁︎｡⋆｡ ﾟ☾ ﾟ｡⋆ ﾟ｡⋆ ☁︎｡⋆｡ ﾟ⋆         
-         
-                       O   
-       ---------------/|\-------------- +  
-                      / \    
-    ========================================
-        ''',
-        r'''
-             ⋆｡ﾟ☁︎｡⋆｡ ﾟ☾ ﾟ｡⋆ ﾟ｡⋆ ☁︎｡⋆｡ ﾟ⋆        
-         
-                 O   
-       ---------/|\-------------------- +  
-                / \    
-    ========================================
-        ''',
-        r'''
-             ⋆｡ﾟ☁︎｡⋆｡ ﾟ☾ ﾟ｡⋆ ﾟ｡⋆ ☁︎｡⋆｡ ﾟ⋆        
-         
-           O   
-       ---/|\-------------------------- +  
-          / \    
-    ========================================
-        ''',
-        r'''
-             ⋆｡ﾟ☁︎｡⋆｡ ﾟ☾ ﾟ｡⋆ ﾟ｡⋆ ☁︎｡⋆｡ ﾟ⋆        
-         
-        O   
-       /|\----------------------------- +  
-       / \    
-    ========================================
-        '''
-    ]
-
-    return stages[tries]
 
 # Game function
 def game(genshin_characters):
