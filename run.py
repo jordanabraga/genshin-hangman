@@ -191,7 +191,7 @@ def game(genshin_characters):
     if guessed:
         sprint(simple_colors.yellow(f"You got it, {name.capitalize()}! {genshin_characters.title()} is here to help you!\nTogether you form the best adventuring due and\n no Fatui agent can steal your {random_element.capitalize()} vision from you.\n"))
     else:
-        sprint(simple_colors.yellow(f"Oh no, the Fatui agent stole your vision! You didn't discover {genshin_characters.title()} in time.\n"))
+        sprint(simple_colors.yellow(f"Oh no, the Fatui agent stole your vision! \nYou didn't discover {genshin_characters.title()} in time.\n"))
 
 
 '''
