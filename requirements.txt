@@ -1,1 +1,1 @@
-# Your requirements go here
+simple-colors==0.1.5
