@@ -181,7 +181,7 @@ def game(genshin_characters):
         else:
             print("\nNot a valid guess.")
 
-        print("<<>><<>><<>><<>><<>><<>><<>><<>><<>><<>><<>><<>><<>><<>><<>><<>><<>><<>><<>>")
+        print("\n<<>><<>><<>><<>><<>><<>><<>><<>><<>><<>><<>><<>><<>><<>><<>><<>><<>><<>><<>>")
         print(simple_colors.cyan(display_hangman(tries)))
         print(word_completion)
         print("\nGuessed letters:", guessed_letters)
@@ -224,7 +224,7 @@ sprint('Oh no! Now a Fatui agent is trying to steal it!\n')
 
 sprint('Can you guess who is coming to help you?\n')
 
-sprint(simple_colors.green("Instructions: This is a Hangman style game.\n Guess the letters from a Genshin Impact character's name.\nIncorrect guesses bring the Fatui agent closer to the Vision. \n"))
+sprint(simple_colors.green("Instructions: This is a Hangman style game.\nGuess the letters from a Genshin Impact character's name.\nIncorrect guesses bring the Fatui agent closer to the Vision. \n"))
 
 
 '''
