@@ -5,6 +5,8 @@
 
 **Save the Vision** is terminal-based python game using the mechanics of the classic Hangman. It's a tribute to the Genshin Impact's franchise and invites the player on an adventure. 
 
+![Save the Vision game intro screenshot](docs/readme/save_the_vision_screenshot.jpg)
+
 In this game, the player receives one type of elemental vision and must protect it by finding out which of the beloved Genshin characters will be their partner in (stopping) crime. If the player makes too many wrong guesses, a Fatui agent steals their Vision. 
 
 **Context for Non-Genshin players:** In the world of Genshin, a few people are blessed with an elemental Vision that grants them power over the element. The player is a traveler that meets many adventure companions around the world. The Fatui is an organization that, most of the time, antagonizes the heroes. 
@@ -35,6 +37,8 @@ The player is able to enter their name and have a personalized game
 
 The player receives a random type of Vision
 
+![Save the Vision game screenshot](docs/readme/intro_secrenshot.jpg)
+
 The game accept both letters and full words, in case the player recognizes the name and want to write it all at once.
 
 Input validation and error-checking
@@ -49,6 +53,8 @@ Hint system
 Guessed letters are displayed 
 
 ASCII graphics to illustrate the Fatui agent getting closer with each mistake
+
+![Save the Vision hint in the game screenshot](docs/readme/hint_screenshot.jpg)
 
 Text narration
 
@@ -74,6 +80,8 @@ The target audience is Genshin Impact players who might want to have a moment of
 In a way, Save the Vision fullfills the same curiosity of an internet quiz ("What type is your vision?", "Who is your Genshin adventure partner?"). The fact that Genshin is a gacha game (you win characters in a sort of lottery) matches the "luck" component of being assigned a random Vision and character in Save the Vision. 
 
 The game itself is actually hard and entertaining. I implemented the hint system after failing too many times to save my Vision.
+
+![Save the Vision screenshot showing the ASCII drawing with moon and stars](docs/readme/game_screenshot.jpg)
 
 The details in the game are made to match Genshin Impact's game identity. The vocabulary, the colors and even the game mechanics reinforce that. 
 

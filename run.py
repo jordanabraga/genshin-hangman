@@ -152,7 +152,12 @@ def game(genshin_characters):
     while not guessed and tries > 0:
         guess = input(simple_colors.green("Who is helping you? \n")).upper()
         print("\n<<>><<>><<>><<>><<>><<>><<>><<>><<>><<>><<>><<>><<>><<>><<>>")
-        if len(guess) == 1 and guess.isalpha():
+        if len(guess) == len(hint):
+            print(simple_colors.yellow(
+                f'''\n>->->->-> Hi, {name.capitalize()}! ・゜ʚɞ ゜
+>->->->-> Maybe try the letter {random.choice(genshin_characters)}.'''
+            ))        
+        elif len(guess) == 1 and guess.isalpha():
             if guess in guessed_letters:
                 print("\nYou've already guessed", guess)
             elif guess not in genshin_characters:
@@ -182,12 +187,6 @@ def game(genshin_characters):
             else:
                 guessed = True
                 word_completion = genshin_characters
-
-        elif len(guess) == len(hint):
-            print(simple_colors.yellow(
-                f'''\n>->->->-> Hi, {name.capitalize()}! ・゜ʚɞ ゜
->->->->-> Maybe try the letter {random.choice(genshin_characters)}.'''
-            ))
 
         else:
             print("\nNot a valid guess.")
